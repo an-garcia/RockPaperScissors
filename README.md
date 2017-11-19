@@ -1,7 +1,8 @@
 # RockPaperScissors
 
 
-![Scheme](/screenshots/SimulatorScreenShot-iPhone8Plus-2017-11-18at13.29.28x.png)
+![Scheme](/screenshots/SimulatorScreenShot-iPhone8Plus-2017-11-19at16.17.31.png)
+![Scheme](/screenshots/SimulatorScreenShot-iPhone8Plus-2017-11-19at16.17.39.png)
 
 
 RockPaperScissors is an iOS sample application that plays rock, paper, scissors and shows the history using TableView.
