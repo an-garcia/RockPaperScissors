@@ -1,24 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Rock Paper Scissors View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="BYZ-38-t0r" customClass="RockPaperScissorsViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q0y-i9-FUS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxX-KU-JFf">
+                                <rect key="frame" x="244" y="281" width="75" height="65"/>
+                                <state key="normal" image="scissors">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeYourMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Er-C6-knZ"/>
+                                    <segue destination="Wkh-SZ-qNw" kind="show" identifier="throwDownScissors" id="Waz-bp-GJb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Play!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HEG-DP-svS">
+                                <rect key="frame" x="149" y="577" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajg-L5-Hsh">
+                                <rect key="frame" x="150" y="171" width="75" height="65"/>
+                                <state key="normal" image="paper">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeYourMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rZN-rB-oP0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbi-3v-9uq">
+                                <rect key="frame" x="56" y="281" width="75" height="65"/>
+                                <state key="normal" image="rock">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeYourMove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dd8-S1-QP8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="A3e-2W-vgb" firstAttribute="bottom" secondItem="HEG-DP-svS" secondAttribute="bottom" constant="69" id="7n9-Em-n30"/>
+                            <constraint firstItem="HxX-KU-JFf" firstAttribute="top" secondItem="xbi-3v-9uq" secondAttribute="top" id="HKR-y5-6lU"/>
+                            <constraint firstItem="xbi-3v-9uq" firstAttribute="leading" secondItem="q0y-i9-FUS" secondAttribute="leadingMargin" constant="40" id="TBW-Ic-ZUl"/>
+                            <constraint firstItem="HxX-KU-JFf" firstAttribute="top" secondItem="q0y-i9-FUS" secondAttribute="top" constant="281" id="ULt-3L-Egj"/>
+                            <constraint firstItem="ajg-L5-Hsh" firstAttribute="centerX" secondItem="q0y-i9-FUS" secondAttribute="centerX" id="V1K-ui-enx"/>
+                            <constraint firstItem="HxX-KU-JFf" firstAttribute="top" secondItem="ajg-L5-Hsh" secondAttribute="bottom" constant="45" id="Ymn-Lm-Cqd"/>
+                            <constraint firstItem="ajg-L5-Hsh" firstAttribute="centerX" secondItem="HEG-DP-svS" secondAttribute="centerX" id="mrV-cE-dyJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HxX-KU-JFf" secondAttribute="trailing" constant="40" id="p08-ic-jAT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A3e-2W-vgb"/>
                     </view>
+                    <connections>
+                        <outlet property="paperButton" destination="ajg-L5-Hsh" id="cBe-x9-bmB"/>
+                        <outlet property="rockButton" destination="xbi-3v-9uq" id="iuQ-9L-Icb"/>
+                        <outlet property="scissorsButton" destination="HxX-KU-JFf" id="ou8-xS-SrV"/>
+                        <segue destination="Wkh-SZ-qNw" kind="show" identifier="throwDownPaper" id="yC1-ad-QJL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Result View Controller-->
+        <scene sceneID="3zh-t9-xre">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" id="Wkh-SZ-qNw" customClass="ResultViewController" customModule="RockPaperScissors" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N3h-hn-koU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rock-paper-scissors1" translatesAutoresizingMaskIntoConstraints="NO" id="4tZ-eJ-AIM">
+                                <rect key="frame" x="60" y="104" width="255" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="zGI-qV-kPE"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apL-6d-2fL">
+                                <rect key="frame" x="110" y="599" width="155" height="30"/>
+                                <state key="normal" title="Play Again">
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgainButtonPressed:" destination="Wkh-SZ-qNw" eventType="touchUpInside" id="5zz-bt-FMX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVf-vS-O0h">
+                                <rect key="frame" x="70" y="352" width="235" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="SV7-OY-TLj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gVf-vS-O0h" firstAttribute="centerX" secondItem="apL-6d-2fL" secondAttribute="centerX" id="5QI-gT-av0"/>
+                            <constraint firstItem="gVf-vS-O0h" firstAttribute="top" secondItem="4tZ-eJ-AIM" secondAttribute="bottom" constant="48" id="8y8-Z8-1Y2"/>
+                            <constraint firstItem="gVf-vS-O0h" firstAttribute="leading" secondItem="N3h-hn-koU" secondAttribute="leadingMargin" constant="54" id="SD7-g4-kTK"/>
+                            <constraint firstItem="4tZ-eJ-AIM" firstAttribute="leading" secondItem="N3h-hn-koU" secondAttribute="leadingMargin" constant="44" id="iCa-Pa-EFi"/>
+                            <constraint firstItem="Oet-7b-NrU" firstAttribute="bottom" secondItem="apL-6d-2fL" secondAttribute="bottom" constant="38" id="kbV-Dv-8oU"/>
+                            <constraint firstItem="apL-6d-2fL" firstAttribute="leading" secondItem="N3h-hn-koU" secondAttribute="leadingMargin" constant="94" id="maj-Cd-czV"/>
+                            <constraint firstItem="4tZ-eJ-AIM" firstAttribute="centerX" secondItem="N3h-hn-koU" secondAttribute="centerX" id="orb-zy-OYe"/>
+                            <constraint firstItem="4tZ-eJ-AIM" firstAttribute="centerX" secondItem="gVf-vS-O0h" secondAttribute="centerX" id="vxT-0z-bQa"/>
+                            <constraint firstItem="4tZ-eJ-AIM" firstAttribute="top" secondItem="Oet-7b-NrU" secondAttribute="top" constant="84" id="vyr-aS-xd7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Oet-7b-NrU"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="gVf-vS-O0h" id="Ees-xa-JBw"/>
+                        <outlet property="playAgainButton" destination="apL-6d-2fL" id="c3Q-ec-adM"/>
+                        <outlet property="resultImageView" destination="4tZ-eJ-AIM" id="kXb-AF-QLq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eg1-er-imm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="887" y="98"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="paper" width="75" height="65"/>
+        <image name="rock" width="75" height="65"/>
+        <image name="rock-paper-scissors1" width="460" height="276"/>
+        <image name="scissors" width="75" height="65"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="yC1-ad-QJL"/>
+    </inferredMetricsTieBreakers>
 </document>
