@@ -44,11 +44,17 @@ class RockPaperScissorsViewController: UIViewController {
     }
     
     @IBAction func showHistory(_ sender: AnyObject) {
-        //TODO: Present HistoryViewController
+        //CAll the HistoryViewController
+        // Get the storyboard and ResultViewController
+        let storyboard = UIStoryboard (name: "Main", bundle: nil)
+        let historyVC = storyboard.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
+        
+        // Communicate the match
+        //historyVC.match = self.match
+        self.present(historyVC, animated: true, completion: nil)
     }
     
     // MARK: Play!
-    
     func throwDown(_ playersMove: RPS) {
         // The RPS enum generates the opponent's move
         let computersMove = RPS()
@@ -82,7 +88,6 @@ class RockPaperScissorsViewController: UIViewController {
     }
     
     // MARK: Segue
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Notice that this code works for both Scissors and Paper
         let controller = segue.destination as! ResultViewController

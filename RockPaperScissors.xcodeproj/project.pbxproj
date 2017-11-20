@@ -15,6 +15,7 @@
 		829CDCC61FC213E400E16E44 /* RPS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829CDCC51FC213E400E16E44 /* RPS.swift */; };
 		829CDCC81FC2141800E16E44 /* RPSMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829CDCC71FC2141800E16E44 /* RPSMatch.swift */; };
 		829CDCCA1FC2145200E16E44 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829CDCC91FC2145200E16E44 /* ResultViewController.swift */; };
+		829CDCCC1FC2325C00E16E44 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829CDCCB1FC2325C00E16E44 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		829CDCC51FC213E400E16E44 /* RPS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPS.swift; sourceTree = "<group>"; };
 		829CDCC71FC2141800E16E44 /* RPSMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPSMatch.swift; sourceTree = "<group>"; };
 		829CDCC91FC2145200E16E44 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		829CDCCB1FC2325C00E16E44 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				829CDCB31FC2121F00E16E44 /* AppDelegate.swift */,
 				829CDCC71FC2141800E16E44 /* RPSMatch.swift */,
 				829CDCC91FC2145200E16E44 /* ResultViewController.swift */,
+				829CDCCB1FC2325C00E16E44 /* HistoryViewController.swift */,
 				829CDCB51FC2121F00E16E44 /* RockPaperScissorsViewController.swift */,
 				829CDCC51FC213E400E16E44 /* RPS.swift */,
 				829CDCB71FC2121F00E16E44 /* Main.storyboard */,
@@ -148,6 +151,7 @@
 				829CDCCA1FC2145200E16E44 /* ResultViewController.swift in Sources */,
 				829CDCB61FC2121F00E16E44 /* RockPaperScissorsViewController.swift in Sources */,
 				829CDCB41FC2121F00E16E44 /* AppDelegate.swift in Sources */,
+				829CDCCC1FC2325C00E16E44 /* HistoryViewController.swift in Sources */,
 				829CDCC61FC213E400E16E44 /* RPS.swift in Sources */,
 				829CDCC81FC2141800E16E44 /* RPSMatch.swift in Sources */,
 			);
