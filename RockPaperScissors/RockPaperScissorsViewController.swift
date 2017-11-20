@@ -11,7 +11,6 @@ import UIKit
 class RockPaperScissorsViewController: UIViewController {
 
     // MARK: Properties
-    
     var match: RPSMatch!
     
     // Here is the history array which will hold the results of each match that is played in a session.
@@ -44,14 +43,14 @@ class RockPaperScissorsViewController: UIViewController {
     }
     
     @IBAction func showHistory(_ sender: AnyObject) {
-        //CAll the HistoryViewController
+        // Call the HistoryViewController
         // Get the storyboard and ResultViewController
-        let storyboard = UIStoryboard (name: "Main", bundle: nil)
-        let historyVC = storyboard.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
+        let storyboard = self.storyboard
+        let controller = storyboard?.instantiateViewController(withIdentifier: "HistoryViewController")as! HistoryViewController
         
-        // Communicate the match
-        //historyVC.match = self.match
-        self.present(historyVC, animated: true, completion: nil)
+        controller.history = self.history
+        
+        self.present(controller, animated: true, completion: nil)
     }
     
     // MARK: Play!
@@ -63,7 +62,7 @@ class RockPaperScissorsViewController: UIViewController {
         self.match = RPSMatch(p1: playersMove, p2: computersMove)
         
         // Here we add a match to the history array.
-        history.append(match)
+        self.history.append(match)
         
         //Here are the 3 ways of presenting a View Controller
         
