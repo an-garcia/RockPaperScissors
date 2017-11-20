@@ -73,7 +73,6 @@ class ResultViewController: UIViewController {
     }
     
     // MARK: Image for Match
-    
     func imageForMatch(_ match: RPSMatch) -> UIImage {
         
         var name = ""

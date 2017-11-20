@@ -32,10 +32,46 @@ class HistoryViewController: UIViewController, UITableViewDataSource {
         let cell =  tableView.dequeueReusableCell(withIdentifier: self.cellReuseIdentifier)!
         let historyItem = self.history[(indexPath as NSIndexPath).row]
         
-        cell.textLabel?.text = historyItem.p1.description
-        cell.detailTextLabel?.text = historyItem.p2.description
+        cell.textLabel?.text = victoryStatusDescription(historyItem)
+        cell.detailTextLabel?.text = detailsMatch(historyItem)
+        cell.imageView?.image = imageForMatch(historyItem)
         
         return cell
+    }
+    
+    // Creates a status
+    func victoryStatusDescription(_ match: RPSMatch) -> String {
+        if (match.p1 == match.p2) {
+            return "Tie."
+        } else if (match.p1.defeats(match.p2)) {
+            return "Win!"
+        } else {
+            return "Loss."
+        }
+    }
+    
+    func detailsMatch(_ match: RPSMatch) -> String {
+        return "User: " + match.p1.description + " vs Computer: " + match.p2.description
+    }
+    
+    // MARK: Image for Match
+    func imageForMatch(_ match: RPSMatch) -> UIImage {
+        
+        var name = ""
+        
+        switch (match.winner) {
+        case .rock:
+            name = "RockCrushesScissors"
+        case .paper:
+            name = "PaperCoversRock"
+        case .scissors:
+            name = "ScissorsCutPaper"
+        }
+        
+        if match.p1 == match.p2 {
+            name = "itsATie"
+        }
+        return UIImage(named: name)!
     }
     
     @IBAction func closeWindow(_ sender: AnyObject) {
